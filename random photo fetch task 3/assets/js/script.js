@@ -23,7 +23,7 @@ function getRandomDog() {
         .then(data => {
             console.log(data);
             //video olanda console.log da uzerinden atladigini gore bilersiniz, cunki img taginden istifade edirem
-            if (data.url.includes('.mp4')) {
+            if (data.url.includes('.mp4') || data.url.includes('.gif') ) {
                 getRandomDog();
             } else {
                 dog.innerHTML = `<img src=${data.url} alt="dog"/>`;
